@@ -5,6 +5,9 @@ theme = "amp"
 
 enableEmoji =  true
 
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
 [params]
     amp = true # enables amp features
     ampCdnRoot = "https://cdn.ampproject.org/" # defined base cdn root of the amp projects files

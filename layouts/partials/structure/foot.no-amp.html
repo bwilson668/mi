@@ -7,7 +7,7 @@
             <li>Social</li>
         </ul>
     </div>
-    <p class="text-center bg-blue py-2 text-blue-lightest">&copy;{{ .Now.Year }} Measured Improvement</p>
+    <p class="text-center bg-blue py-2 text-blue-lightest">&copy; {{ now.Format "2006" }} Measured Improvement</p>
 </footer>
 
 {{ with $.Site.Params.stylesheetRegular }}

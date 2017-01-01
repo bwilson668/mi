@@ -1,0 +1,32 @@
+@tailwind preflight;
+
+@import "syntax";
+
+html { height: 100% !important; }
+
+body { 
+    height: 100% !important; 
+    @apply .flex .flex-col;
+}
+
+main, section {
+    @apply .flex-1;
+}
+
+a { text-decoration: none; }
+
+p { @apply .leading-normal; }
+
+.jumbotron {
+    min-height: 300px;
+}
+
+.lang {
+    @apply .uppercase .px-2 .mt-2 .rounded-t-lg .bg-yellow-dark .flex-no-grow;
+}
+
+pre.chroma {
+    @apply .border-yellow-dark .border-2 .rounded-b-lg .rounded-r-lg .p-3;
+}
+
+@tailwind utilities;

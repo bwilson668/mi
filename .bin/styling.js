@@ -3,8 +3,9 @@ var postcss = require('postcss');
 var fs = require('fs');
 var tailwindcss = require('tailwindcss');
 
-const inputFile = './layouts/src/styles.scss';
+const inputFile = './layouts/src/sass/styles.scss';
 const outputFile = './layouts/partials/stylesheet.html';
+const tailwindConfig = './tailwind.js';
 
 sass.render({
     file: inputFile,
@@ -18,7 +19,7 @@ sass.render({
     }
     else {
         let cssOutput = result.css.toString();
-        postcss([tailwindcss('./tailwind.js'), require('autoprefixer'), require('cssnano')])
+        postcss([tailwindcss(tailwindConfig), require('autoprefixer'), require('cssnano')])
             .process(cssOutput)
             .then((result) => {
                 fs.writeFile(outputFile, result.css, function (err) {

@@ -5,6 +5,7 @@ draft: true
 ---
 ## Hi there
 
+<span class="lang">html</span>
 ```html
 <section id="main">
   <div>
