@@ -1,0 +1,26 @@
+{
+  "name": "quickstart",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "autoprefixer": "^7.2.3",
+    "cssnano": "^3.10.0",
+    "html-minifier": "^3.5.7",
+    "node-sass": "^4.7.2",
+    "nodemon": "^1.14.3",
+    "postcss": "^6.0.14",
+    "tailwindcss": "^0.4.0"
+  },
+  "scripts": {
+    "hugo:server": "hugo server --buildDrafts --buildFuture",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:prod": "npm run theme:build && hugo && npm run optimize:html",
+    "optimize:html": "./node_modules/.bin/html-minifier --input-dir ./public/ --output-dir ./public/ --file-ext html -c ./.html-minifier-config.json",
+    "theme:build": "node ./.bin/styling",
+    "theme:watch": "./node_modules/.bin/nodemon -e scss -w ./ -x npm run theme:build"
+  },
+  "author": "bwilson",
+  "license": "UNLICENSED"
+}

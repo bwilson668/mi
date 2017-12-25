@@ -1,0 +1,20 @@
+@tailwind preflight;
+
+html { height: 100%; }
+
+body { 
+    height: 100%; 
+    @apply .flex .flex-col;
+}
+
+section {
+    @apply .flex-1
+}
+
+a { text-decoration: none; }
+
+.jumbotron {
+    min-height: 300px;
+}
+
+@tailwind utilities;
