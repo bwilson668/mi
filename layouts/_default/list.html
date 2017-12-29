@@ -1,5 +1,11 @@
 {{ partial "structure/head" . }}
 
-list template
+{{ partial "structure/header" . }}
+
+List Template
+
+<main class="container m-auto">
+    {{ .Content }}
+</main>
 
 {{ partial "structure/foot" . }}
