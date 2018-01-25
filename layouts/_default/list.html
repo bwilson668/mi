@@ -2,10 +2,29 @@
 
 {{ partial "structure/header" . }}
 
-List Template
+{{ partial "breadcrumb" . }}
 
 <main class="container m-auto">
+
     {{ .Content }}
+
+     {{ range .Data.Pages }}
+        <li>
+            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+        </li>
+    {{ end }}
+
+    <h1>---</h1>
+
+     {{ range (.Paginator 5).Pages }}
+        <li>
+            <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+        </li>
+     {{ end }}
+
+     {{ template "partials/pagination.html" . }}
+
+    
 </main>
 
 {{ partial "structure/foot" . }}

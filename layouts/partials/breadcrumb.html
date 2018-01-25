@@ -1,0 +1,35 @@
+<div class="bg-grey-lighter p-3 font-sans w-full border-t border-grey-light">
+    <nav class="container m-auto">
+        <ol class="list-reset flex text-grey-darker">
+            {{ template "breadcrumbnav" (dict "p1" . "p2" .) }}
+        </ol>
+    </nav>
+</div>
+
+<!-- Breadcrumb Style -->
+{{ define "breadcrumbnav" }} 
+    {{ if .p1.Parent }} 
+        {{ template "breadcrumbnav" (dict "p1" .p1.Parent "p2" .p2 ) }} 
+    {{ else if not .p1.IsHome }} 
+        {{ template "breadcrumbnav" (dict "p1" .p1.Site.Home "p2" .p2 ) }} 
+    {{ end }}
+
+    {{ if eq .p1 .p2 }}
+    <li>
+        {{ .p1.Title }}
+    </li>
+    {{ else }}
+    <li>
+        <a href="{{ .p1.Permalink }}" class="text-blue font-bold">
+            {{ if .p1.IsHome }}
+                <i class="fas fa-home"></i>
+            {{ else }}
+                {{ .p1.Title }}
+            {{ end }}
+        </a>
+    </li>
+    <li>
+        <i class="mx-2 far fa-angle-right"></i>
+    </li>
+    {{ end }}
+{{ end }}

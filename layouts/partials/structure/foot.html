@@ -1,15 +1,7 @@
 {{ if ne .Params.amp.enable false }}
 
-<footer class="bg-blue-dark">
-    <div class="container mx-auto text-blue-lightest py-6">
-        <ul>
-            <li>More Info</li>
-            <li>Contact</li>
-            <li>Press</li>
-            <li>Social</li>
-        </ul>
-    </div>
-    <p class="text-center bg-blue py-2 text-blue-lightest">&copy; {{ now.Format "2006" }} Measured Improvement</p>
+<footer class="bg-blue border-t border-blue-dark">
+    <p class="text-center py-2 text-blue-lightest">&copy; {{ now.Format "2006" }} Measured Improvement</p>
 </footer>
 
 {{ partial "amp/google-analytics" . }}
