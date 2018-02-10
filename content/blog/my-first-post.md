@@ -5,7 +5,8 @@ draft: true
 ---
 ## Hi there
 
-<span class="lang">html</span>
+Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, amet praesentium. Quas tempore magni numquam culpa similique assumenda quod nisi impedit in dolorum expedita cumque, ipsum quasi excepturi odit officiis?
+
 ```html
 <section id="main">
   <div>

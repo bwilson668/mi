@@ -4,7 +4,7 @@
     <div class="pagination">
         <div class="row flex items-center justify-center">
             {{ if $pag.HasPrev }}
-            <a class="bg-blue-lightest w-8 h-8 flex items-center justify-center text-grey-darker p-2 text-center m-1 rounded-full" href="{{ $pag.Prev.URL }}">
+            <a class="bg-blue-lightest hover:bg-blue-lighter w-8 h-8 flex items-center justify-center text-grey-darker p-2 text-center m-1 rounded-full" href="{{ $pag.Prev.URL }}">
                 <i class="fas fa-chevron-left"></i>
             </a>
             {{ else }}
@@ -18,13 +18,13 @@
                         {{ .PageNumber }}
                     </span>
                 {{ else }}
-                    <a class='border border-blue-light bg-blue-lightest w-10 h-10 flex items-center justify-center text-grey-darker p-2 text-center m-1 rounded-full' href='{{ .URL }}'>
+                    <a class='border border-blue-light bg-blue-lightest hover:bg-blue-lighter w-10 h-10 flex items-center justify-center text-grey-darker p-2 text-center m-1 rounded-full' href='{{ .URL }}'>
                         {{ .PageNumber }}
                     </a>
                 {{ end }}
             {{ end }}
             {{ if $pag.HasNext }}
-            <a class="bg-blue-lightest w-8 h-8 flex items-center justify-center text-grey-darker p-2 text-center m-1 rounded-full" href="{{ $pag.Next.URL }}">
+            <a class="bg-blue-lightest hover:bg-blue-lighter w-8 h-8 flex items-center justify-center text-grey-darker p-2 text-center m-1 rounded-full" href="{{ $pag.Next.URL }}">
                 <i class="fas fa-chevron-right"></i>
             </a>
             {{ else }}

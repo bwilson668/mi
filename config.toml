@@ -1,12 +1,17 @@
-baseURL = "http://example.org/"
+baseURL = "https://measuredimprovement.com/"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "Measured Improvement"
 theme = "amp"
 
 enableEmoji =  true
 
 pygmentsCodeFences = true
 pygmentsUseClasses = true
+
+[taxonomies]
+    tag = "tags"
+    category = "categories"
+    series = "series"
 
 [params]
     amp = true # enables amp features
