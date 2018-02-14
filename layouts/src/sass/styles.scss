@@ -21,6 +21,14 @@ p { @apply .leading-normal; }
     min-height: 300px;
 }
 
+.feature-image {
+    @apply .rounded-full;
+    max-width: 300px;
+    min-width: 30px;
+    max-height: 300px;
+    min-height: 30px;
+}
+
 .lang {
     @apply .uppercase .px-2 .mt-2 .rounded-t-lg .bg-yellow-dark .flex-no-grow;
 }

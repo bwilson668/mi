@@ -4,8 +4,27 @@
 
 {{ partial "breadcrumb" . }}
 
-<main class="container m-auto">
-    {{ .Content }}
-</main>
+<div class="container m-auto">
+    <div class="flex justify-between align-center">
+        <div>
+            <div class="text-sm text-grey-dark flex items-center justify-between pb-1">
+                {{ range .Params.categories }}
+                <p class="uppercase">{{ . }}</p>
+                {{ end }}
+            </div>
+            <h1>{{ .Title }}</h1>
+        </div>
+        <img src="http://via.placeholder.com/300x300" class="feature-image">
+    </div>
+    
+    <div class="flex">
+        <main class="mx-2">
+            
+            {{ .Content }}
+        </main>
+
+    {{ template "partials/sidebar.html" . }}
+    </div>
+</div>
 
 {{ partial "structure/foot" . }}
