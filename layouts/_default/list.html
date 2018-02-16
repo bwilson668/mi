@@ -9,22 +9,21 @@
 
     <div class="flex sm:flex-col">
 
-        <main>
             <div class="flex flex-wrap -mx-2">
                 {{ range (.Paginator 4).Pages }}
                 <div class="md:w-1/2 w-full pr-4 mb-4">
                     <div class="rounded overflow-hidden shadow bg-white border-t-4 border-blue p-4 flex">
                         {{ if .Params.feature_image }}
-                        <a href="{{.RelPermalink}}" class="h-48 w-48 -ml-8 my-auto mr-2">
-                            <img src="{{ .Params.feature_image }}" class="h-full rounded-full">
+                        <a href="{{.RelPermalink}}" class="mr-2 -ml-8 my-auto p-2 bg-blue-lighter rounded-full">
+                            <img src="{{ .Params.feature_image }}" class="h-48 w-48 rounded-full">
                         </a>
                         {{ end }}
                         <div class="flex-1 flex flex-col">
                             <div class="text-sm text-grey-dark flex items-center justify-between leading-normal">
-                                <p>{{ .Date.Format "Jan 2, 2006" }}</p>
                                 {{ range .Params.categories }}
                                 <p class="uppercase">{{ . }}</p>
                                 {{ end }}
+                                <p>{{ .Date.Format "Jan 2, 2006" }}</p>
                             </div>
                             <a class="font-bold text-black text-xl leading-loose" href="{{.RelPermalink}}">{{ .Title }}</a>
                             {{ if .Params.summary }}
@@ -41,41 +40,7 @@
                 {{ end }}
             </div>
             
-            <div class="flex flex-wrap -mx-2">
-                {{ range (.Paginator 4).Pages }}
-                <div class="mb-4 px-2 rounded overflow-hidden shadow bg-white flex w-1/2">
-                    {{ if .Params.feature_image }}
-                    <a href="{{.RelPermalink}}" class="rounded" style="background: url({{ .Params.feature_image }}) no-repeat center center; min-width: 50px; min-height: 50px;"></a>
-                    {{ end }}
-                    <div>
-                        <div class="text-sm text-grey-dark flex items-center justify-between px-3 pt-2">
-                            {{ range .Params.categories }}
-                            <p class="uppercase">{{ . }}</p>
-                            {{ end }}
-                        </div>
-                        <div class="text-sm text-grey-dark flex items-center justify-between px-3 leading-loose">
-                            <a class="font-bold text-black text-xl" href="{{.RelPermalink}}">{{ .Title }}</a>
-                            <p>{{ .Date.Format "Jan 2, 2006" }}</p>
-                        </div>
-
-                        <p class="text-grey-darker text-base px-3 pb-2">
-                            {{ .Summary }}
-                        </p>
-
-                        <div class="bg-yellow-lightest p-3 text-center">
-                            <a class="text-grey hover:text-grey-dark text-sm uppercase" href="{{.RelPermalink}}">Read More</a>
-                        </div>
-                    </div>
-                </div>
-                {{ end }}
-            </div>
-            
-
             {{ template "partials/pagination.html" . }}
-
-        </main>
-
-        {{ template "partials/sidebar.html" . }}
 
     </div>
 </div>

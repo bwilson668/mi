@@ -21,20 +21,33 @@ p { @apply .leading-normal; }
     min-height: 300px;
 }
 
-.feature-image {
-    @apply .rounded-full;
-    max-width: 300px;
-    min-width: 30px;
-    max-height: 300px;
-    min-height: 30px;
-}
-
-.lang {
-    @apply .uppercase .px-2 .mt-2 .rounded-t-lg .bg-yellow-dark .flex-no-grow;
-}
-
 pre.chroma {
-    @apply .border-yellow-dark .border-2 .rounded-b-lg .rounded-r-lg .p-3;
+    @apply -mx-4 my-2 .p-4;
+}
+
+// Post Styles
+.post--body {
+    @apply pt-4 leading-normal text-lg;
+
+    & p {
+        @apply py-2 text-grey-darker;
+    }
+
+    & h1, h2, h3, h4, h5, h6 {
+        @apply text-grey-darkest py-4;
+    }
+
+    & blockquote {
+        @apply mx-8 my-2 p-4 border-yellow-dark border-l-4 font-semibold bg-grey-lighter rounded;
+    }
+
+    & img {
+        @apply w-4/5 m-auto block shadow rounded;
+    }
+
+    & img + em {
+        @apply pt-1 text-center block text-sm;
+    }
 }
 
 // Skew Utilities
