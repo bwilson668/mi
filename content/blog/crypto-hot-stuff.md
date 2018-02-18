@@ -7,8 +7,6 @@ feature_image: "https://tailwindcss.com/img/card-top.jpg"
 summary: "Learn all about it now, before the pyramid collapses."
 ---
 
-  - [I want a header](#i-want-a-header)
-
 Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum dolore, ab recusandae natus, dolores harum quas suscipit in officiis totam nobis facere id quam nulla soluta similique ipsam, eaque magnam.
 
 Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo porro praesentium dolore. Laborum, nostrum! Deserunt minus recusandae, rem, nam neque iste doloremque soluta assumenda cumque tenetur vitae itaque harum adipisci.
