@@ -42,3 +42,6 @@ Ladidadida
 
 ![!i](http://localhost:1313/images/data-hero.jpg)
 *caption*
+
+Dad runs an excellent [Centre Math Program](https://centre.edu).
+

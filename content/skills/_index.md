@@ -7,6 +7,6 @@ feature_image: ""
 summary: ""
 ---
 
-# Cards
+# Skills
 
-Cards will be the technical implementation (code) of how to follow the strategy guide.
+Skills will be the technical implementation (code) of how to follow the strategy guide.
