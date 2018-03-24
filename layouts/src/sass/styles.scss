@@ -29,7 +29,7 @@ pre.chroma {
 .post--body {
     @apply pt-4 leading-normal text-lg;
 
-    & p {
+    & p, li{
         @apply py-2 text-grey-darker;
     }
 

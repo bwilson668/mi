@@ -1,9 +1,11 @@
 ---
 title: "{{ replace .TranslationBaseName "-" " " | title }}"
 date: {{ .Date }}
-draft: true
+# type: ""
+# layout: "single"
 categories: ['']
 feature_image: ""
 summary: ""
+draft: true
 ---
 

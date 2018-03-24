@@ -1,0 +1,78 @@
+{{ partial "structure/head" . }} 
+
+{{ partial "structure/header" . }} 
+
+{{ partial "breadcrumb" . }}
+
+<div class="container m-auto my-8">
+
+    <main class="mb-4">
+        <h1 class="leading-loose">{{ .Params.title }} </h1>
+        <div class="leading-normal text-grey-darker text-lg">
+            {{ .Content }}
+        </div>
+    </main>
+
+    <div class="flex -mx-4">
+
+        <div class="mx-4 p-4 w-1/3 rounded border-t-4 border-blue bg-white shadow overflow-hidden">
+            <h1>Domains</h1>
+
+            <ul>
+                <li>Business</li>
+                <ul>
+                    <li>Marketing</li>
+                    <li>Sales</li>
+                    <li>Operations</li>
+                    <li>Product</li>
+                </ul>
+                <li>Business Models</li>
+                <ul>
+                    <li>SaaS</li>
+                    <li>Franchise</li>
+                    <li>Franchise</li>
+                </ul>
+            </ul>
+
+        </div>
+
+        <div class="mx-4 p-4 w-1/3 rounded border-t-4 border-blue bg-white shadow overflow-hidden">
+            <h1>Data Concepts</h1>
+        
+            <ul>
+                <li>Data Cleaning</li>
+                <li>Supervised ML</li>
+                <li>Unsupervised ML</li>
+                <ul>
+                    <li>Anamoly Detection</li>
+                </ul>
+                <li>Reinforcement Learning</li>
+                <ul>
+                    <li>Simulation</li>
+                </ul>
+            </ul>
+        
+        </div>
+
+        <div class="mx-4 p-4 w-1/3 rounded border-t-4 border-blue bg-white shadow overflow-hidden">
+            <h1>Tooling Tips</h1>
+        
+            <ul>
+                <li>SQL</li>
+                <li>Python</li>
+                <ul>
+                    <li>Shallow Learning</li>
+                    <li>Deep Learning</li>
+                </ul>
+                <li>R</li>
+                <li>Excel</li>
+            </ul>
+        
+        </div>
+
+    </div>
+
+</div>
+<div class="flex-1"></div>
+
+{{ partial "structure/foot" . }}
