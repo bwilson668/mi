@@ -86,4 +86,11 @@ pre.chroma {
 .right-skew { @include skew($bg: red, $deg: -45deg, $right: -15px, $width: 35px); }
 .left-skew { @include skew($side: left, $bg: red, $deg: 20deg, $left: -28px, $width: 55px); }
 
+// Gradient Utilitiles
+.throwing-shade {
+    background: linear-gradient(-30deg, config('colors.blue-darker'), config('colors.blue'));
+    color: #fff;
+}
+
+
 @tailwind utilities;

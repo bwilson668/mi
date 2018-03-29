@@ -1,10 +1,7 @@
 {
     "trackPageview": {
         "on": "visible",
-        "request": "event",
-        "vars": {
-            "eventId": "pageview"
-        }
+        "request": "pageview"
     },
     "trackAnchorClicks": {
         "on": "click",
